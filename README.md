@@ -18,7 +18,7 @@ Familia: Magnoliaceae
 # Resumen de lo que se va hacer
 Abrir Git Bash, entrar a Hoffman y navegar a la carpeta en donde estan todos los archivos, ejecutar Muscle para alinear las secuencias, ejecutar IQ-TREE para construir el árbol filogenético y abrir el archivo creado en Abre FigTree.
 # Data
-Las secuencias del gen se encuentran en la carpeta  dentro de nadiaOT
+Las secuencias del gen se encuentran en la carpeta  dentro de NadiaOT
 # Comandos
 * ssh dechavez@hoffman2.idre.ucla.edu
 * Leptailurus01&
