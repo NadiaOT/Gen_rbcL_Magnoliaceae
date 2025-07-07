@@ -51,5 +51,5 @@ Las secuencias del gen se encuentran en la carpeta  dentro de nadiaOT
 * scp dechavez@hoffman2.idre.ucla.edu: “la direccion exacta del documento” ./ #(en otra terminal)
 * Leptailurus01&
 
-# Resdultados
+# Resultados
 Se visuliza una filogenia del gen rpl10 en Fig tree, aqui se va poder ver  un árbol filogenético que muestra cómo se agrupan y diferencian las especies de Magnoliaceae según las secuencias de rpl10, con ramas que reflejan el grado de similitud y nodos con soporte estadístico.
