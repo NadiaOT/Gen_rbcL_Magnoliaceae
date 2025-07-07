@@ -36,12 +36,11 @@ Las secuencias del gen se encuentran en la carpeta  dentro de NadiaOT
 *  cd rpl10/Magnoliaceae
 *  cp ../muscle3.8.31_i86linux64 .
 *  cp ../rpl10.fna .
-*  ./muscle3.8.31_i86linux64 -in rna.fna -out muscle_rna.fna -maxiters 1 -diags #(opcion 1)
-*  for filename in *.fasta
+  * /muscle3.8.31_i86linux64 -in rna.fna -out muscle_rna.fna -maxiters 1 -diags #(opcion 1)
+  * for filename in *.fasta
 >do
 >./muscle3.8.31_i86linux64 -in $filename -out musscle_$filename
->done
-#(Opcion 2)
+>done (Opcion 2)
 * module load iqtree/2.2.2.6 
 * iqtree2
 * for filename in musscle_*
