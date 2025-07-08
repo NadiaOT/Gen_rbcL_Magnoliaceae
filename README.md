@@ -16,29 +16,42 @@ Familia: Magnoliaceae
 * Git Bash es fundamental para gestionar y reproducir los datos y análisis computacionales que permiten reconstruir las relaciones evolutivas por lo que esta herramienta es de gran ayuda en el estudio del gen rbcL ya que implica trabajar con grandes conjuntos de secuencias genéticas, ejecutar software especializado para alineamientos, construir árboles filogenéticos y manejar versiones de datos y scripts de análisis.
 
 # Programas a utilizar:
-* Muscle (muscle3.8.31_i86linux64): alinear
-* IQ-TREE (iqtree/2.2.2.6): Contruir el arbol filogenetico
-* Figtree: Visualizar el arbol
+* Muscle (muscle3.8.31_i86linux64): realiza alineamientos múltiples de secuencias de ADN, ARN o proteínas.
+  Este  programa bioinformático ya esta instaldo dentro de la carpeta 
+* IQ-TREE (iqtree/2.2.2.6): Construye árboles filogenéticos mediante máxima verosimilitud.
+  Este programa lo vamos instalar directamnete en git bash con module load. 
+* Figtree: visualizar árboles filogenéticos
+  Descargar la versión adecuada para tu sistema operativo en: http://tree.bio.ed.ac.uk/software/figtree/
+  FigTree está desarrollado en Java, así que asegúrate de tener instalada una versión de esta: https://www.java.com/es/download/
+* Atom: Editor de texto de código abierto
+  Descargar el editor de texto en: https://atom-editor.cc/ 
 # Requisitos para ejecutar el programa
 * Instalación de Git Bash en el sistema operativo Windows (de ser el caso) y que los comandos sean ejecutables.
 * Tener acceso a hoffman y a la carpeta personal de Nombre NadiaOT
-* Instalación de herramientas bioinformáticas como:iqtree/2.2.2.6 
+* Instalación de herramientas bioinformáticas. 
 # Resumen de lo que se va hacer
-Abrir Git Bash, entrar a Hoffman y navegar a la carpeta en donde estan todos los archivos, ejecutar Muscle para alinear las secuencias, ejecutar IQ-TREE para construir el árbol filogenético y abrir el archivo creado en Abre FigTree.
+Abrir Git Bash, entrar a Hoffman y navegar a la carpeta en donde estan todos los archivos, ejecutar Muscle para alinear las secuencias, ejecutar IQ-TREE para construir el árbol filogenético y abrir el archivo creado en FigTree.
 # Data
 Las secuencias del gen se encuentran en la carpeta  dentro de NadiaOT
-# Comandos
-* ssh dechavez@hoffman2.idre.ucla.edu
-* Leptailurus01&
-* qrsh -l h_rt=4:00:00,h_vmem=30G -pe shared 4
-* cd $SCRATCH/
-* cd Bioinformatica-PUCE/
-* cd RediseBio/
-* cd NadiaOT/
-* cd TrabajoFinal/
-* 
-* grep "rpl10" Orthologs.IDS.txt #En caso de utilizar orthologs 
-*  ./datasets download gene symbol rpl10 --ortholog Magnoliaceae --filename rpl10_Magnoliaceae.zip
+# ¿Cómo utilizar los comandos paso a paso?
+* Ingresar a Hoffman
+  ssh dechavez@hoffman2.idre.ucla.edu
+  Leptailurus01&
+* Pedir almacenamiento
+  qrsh -l h_rt=4:00:00,h_vmem=30G -pe shared 4
+* Ingresar a la carpeta
+  cd $SCRATCH/
+  cd Bioinformatica-PUCE/
+  cd RediseBio/
+  cd NadiaOT/
+  cd TrabajoFinal/
+* Buscar y descargar el gen
+  En caso de utilizar genes genes ortólogos utilizar Orthologs.IDS.
+  grep "rpl10" Orthologs.IDS.txt #En caso de utilizar orthologs (Grep nos sirve para saber si el gen dentro de Orthologs.IDS.)
+  ./datasets download gene symbol rpl10 --ortholog Magnoliaceae --filename rpl10_Magnoliaceae.zip (Descargar los genes)
+  En este caso el gen rbcL no se encuentra en Orthologs.IDS., entonces utilizaremos el siguiente comando para obtener los genes de la familia Magnoliaceae
+  /u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "rbcL [GENE] AND Magnoliaceae[ORGN]" | efetch -format fasta > Gen_rbcL_Magnoliaceae.zip
+* Descomprimir el gen
 *  unzip rpl10_Magnolia.zip
 *  nano rna.fna #Crear un espacio en el archivo con enter y borrar este mismo espacio, esto se hace para que se detecte que hubo un cambio y guarde, ademas se debe cambiar el nombre a rpl10.fna
 *  cd rpl10/Magnoliaceae
