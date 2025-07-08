@@ -37,7 +37,7 @@ Autor: Nadia Obando
   Descargar el editor de texto en: https://atom-editor.cc/
   
 # Requisitos para ejecutar el programa
-* Instalación de Git Bash en el sistema operativo Windows (de ser el caso) y que los comandos sean ejecutables.
+* Instalación de Git Bash https://gitforwindows.org/ en el sistema operativo Windows (de ser el caso) y que los comandos sean ejecutables.
 * Tener acceso a hoffman y a la carpeta personal de Nombre NadiaOT
 * Instalación de herramientas bioinformáticas. 
 # Resumen de lo que se va hacer
