@@ -1,4 +1,4 @@
-# Tema: Relación evolutiva del gen rbcL en Magnoliaceae
+# Relación evolutiva del gen rbcL en Magnoliaceae
 
 Autor: Nadia Obando
 
