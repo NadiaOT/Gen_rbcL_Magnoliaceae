@@ -1,14 +1,17 @@
 # Tema: Relacion evolutiva del gen rbcL en Magnoliaceae
+
 Autor: Nadia Obando
+
 Familia: Magnoliaceae
+
 ![alt text](https://jeppastradgard.se/wp-content/uploads/2024/12/PTM023_Little-Gem-Magnolia-.jpg)
 # Propósito del proyecto
-* El estudio de la filogenia y las relaciones evolutivas en la familia Magnoliaceae, un grupo basal de plantas con más de 100 millones de años dentro del clado Magnoliidae, es fundamental para entender su historia y diversidad.
+* El estudio de la filogenia y las relaciones evolutivas en la familia Magnoliaceae, un grupo basal de plantas con más de 100 millones de años dentro del clado Magnoliidae (Grupo de Filogenia de las Angiospermas, 2009), es fundamental para entender su historia y diversidad.
 * La filogenia de la familia Magnoliaceae utilizando secuencias del gen rbcL nos ayudara a evaluar las relaciones evolutivas entre sus géneros y especies. El gen rbcL, que codifica la subunidad grande de la enzima RuBisCO involucrada en la fotosíntesis, es un marcador molecular comúnmente empleado en estudios sistemáticos por su conservación y utilidad para resolver relaciones evolutivas a nivel familiar y supraespecífico (Li & Conran, 2003;Zhao et al., 2023).
 * A través del análisis filogenético basado en este gen, se busca:
   Identificar patrones de divergencia genética dentro de la familia.
   Comparar los agrupamientos filogenéticos con las clasificaciones taxonómicas tradicionales.
-  Contribuir al entendimiento de la evolución temprana de las angiospermas, dado el carácter basal de Magnoliaceae dentro del clado de las dicotiledóneas ya que esta familia representa un grupo de gran relevancia evolutiva debido a su antigüedad, con un linaje que data de más de 100 millones de años, esta característica la convierte en un elemento fundamental para el estudio de la evolución y ecología de las plantas con flores (Grupo de Filogenia de las Angiospermas, 2009). 
+  Contribuir al entendimiento de la evolución temprana de las angiospermas, dado el carácter basal de Magnoliaceae dentro del clado de las dicotiledóneas ya que esta familia representa un grupo de gran relevancia evolutiva debido a su antigüedad, esta característica la convierte en un elemento fundamental para el estudio de la evolución y ecología de las plantas con flores (Grupo de Filogenia de las Angiospermas, 2009). 
 * Este enfoque filogenético también puede servir como base para futuros estudios de biogeografía, conservación y evolución morfológica dentro del grupo ademas de que nos ayudan a clarificar la evolución, diversidad y taxonomía de esta familia, además de apoyar la conservación de sus especies, muchas de las cuales son endémicas y ecológicamente importantes.
 * Git Bash es fundamental para gestionar y reproducir los datos y análisis computacionales que permiten reconstruir las relaciones evolutivas por lo que esta herramienta es de gran ayuda en el estudio del gen rbcL ya que implica trabajar con grandes conjuntos de secuencias genéticas, ejecutar software especializado para alineamientos, construir árboles filogenéticos y manejar versiones de datos y scripts de análisis.
 
