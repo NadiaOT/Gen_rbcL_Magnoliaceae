@@ -2,8 +2,6 @@
 
 Autor: Nadia Obando
 
-Familia: Magnoliaceae
-
 ![alt text](https://jeppastradgard.se/wp-content/uploads/2024/12/PTM023_Little-Gem-Magnolia-.jpg)
 # Propósito del proyecto
 * El estudio de la filogenia y las relaciones evolutivas en la familia Magnoliaceae, un grupo basal de plantas con más de 100 millones de años dentro del clado Magnoliidae (Grupo de Filogenia de las Angiospermas, 2009), es fundamental para entender su historia y diversidad.
