@@ -9,7 +9,7 @@ Familia: Magnoliaceae
 * El estudio de la filogenia y las relaciones evolutivas en la familia Magnoliaceae, un grupo basal de plantas con más de 100 millones de años dentro del clado Magnoliidae (Grupo de Filogenia de las Angiospermas, 2009), es fundamental para entender su historia y diversidad.
 * La filogenia de la familia Magnoliaceae utilizando secuencias del gen rbcL nos ayudara a evaluar las relaciones evolutivas entre sus géneros y especies. El gen rbcL, que codifica la subunidad grande de la enzima RuBisCO involucrada en la fotosíntesis, es un marcador molecular comúnmente empleado en estudios sistemáticos por su conservación y utilidad para resolver relaciones evolutivas a nivel familiar y supraespecífico (Li & Conran, 2003;Zhao et al., 2023).
 * A través del análisis filogenético basado en este gen, se busca:
-* 
+  
   Identificar patrones de divergencia genética dentro de la familia.
   
   Comparar los agrupamientos filogenéticos con las clasificaciones taxonómicas tradicionales.
@@ -54,22 +54,38 @@ Las secuencias del gen se encuentran en la carpeta  dentro de NadiaOT
   Leptailurus01&
   
 * Pedir almacenamiento
+  
   qrsh -l h_rt=4:00:00,h_vmem=30G -pe shared 4
+  
 * Ingresar a la carpeta
+  
   cd $SCRATCH/
+  
   cd Bioinformatica-PUCE/
+  
   cd RediseBio/
+  
   cd NadiaOT/
+  
   cd TrabajoFinal/
+  
 * Buscar y descargar el gen
+  
   En caso de utilizar genes genes ortólogos utilizar Orthologs.IDS.
+  
   grep "rpl10" Orthologs.IDS.txt #En caso de utilizar orthologs (Grep nos sirve para saber si el gen dentro de Orthologs.IDS.)
+  
   ./datasets download gene symbol rpl10 --ortholog Magnoliaceae --filename rpl10_Magnoliaceae.zip (Descargar los genes)
+  
   En este caso el gen rbcL no se encuentra en Orthologs.IDS., entonces utilizaremos el siguiente comando para obtener los genes de la familia Magnoliaceae
+  
   /u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "rbcL [GENE] AND Magnoliaceae[ORGN]" | efetch -format fasta > Gen_rbcL_Magnoliaceae.zip
+  
 * Descomprimir el gen
-*  unzip rpl10_Magnolia.zip
-*  nano rna.fna #Crear un espacio en el archivo con enter y borrar este mismo espacio, esto se hace para que se detecte que hubo un cambio y guarde, ademas se debe cambiar el nombre a rpl10.fna
+  
+  unzip rpl10_Magnolia.zip
+  
+  nano rna.fna #Crear un espacio en el archivo con enter y borrar este mismo espacio, esto se hace para que se detecte que hubo un cambio y guarde, ademas se debe cambiar el nombre a rpl10.fna
 *  cd rpl10/Magnoliaceae
 *  cp ../muscle3.8.31_i86linux64 .
 *  cp ../rpl10.fna .
