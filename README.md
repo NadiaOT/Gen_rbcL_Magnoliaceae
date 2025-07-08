@@ -5,7 +5,6 @@ Familia: Magnoliaceae
 # Propósito del proyecto
 * El estudio de la filogenia y las relaciones evolutivas en la familia Magnoliaceae, un grupo basal de plantas con más de 100 millones de años dentro del clado Magnoliidae, es fundamental para entender su historia y diversidad.
 * La filogenia de la familia Magnoliaceae utilizando secuencias del gen rbcL nos ayudara a evaluar las relaciones evolutivas entre sus géneros y especies. El gen rbcL, que codifica la subunidad grande de la enzima RuBisCO involucrada en la fotosíntesis, es un marcador molecular comúnmente empleado en estudios sistemáticos por su conservación y utilidad para resolver relaciones evolutivas a nivel familiar y supraespecífico (Li & Conran, 2003;Zhao et al., 2023).
-![alt text](https://www.researchgate.net/profile/Bin-Bin-Liu/publication/340586615/figure/fig6/AS:895610051887111@1590541484467/Representatives-of-Magnolia-species-continued-A-M-insignis-sect-Manglietia-B-M_Q320.jpg)
 * A través del análisis filogenético basado en este gen, se busca:
   Identificar patrones de divergencia genética dentro de la familia.
   Comparar los agrupamientos filogenéticos con las clasificaciones taxonómicas tradicionales.
