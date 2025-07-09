@@ -78,6 +78,8 @@ Las secuencias del gen se encuentran en la carpeta  dentro de NadiaOT
   En este caso el gen rbcL no se encuentra en Orthologs.IDS., entonces utilizaremos el siguiente comando para obtener los genes de la familia Magnoliaceae
   
   /u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "rbcL [GENE] AND Magnoliaceae[ORGN]" | efetch -format fasta > Gen_rbcL_Magnoliaceae.zip
+
+  esearch -db nucleotide -query "Magnoliaceae[Organism] AND rbcL[Gene]" | efetch -format fasta > Magnoliaceae_rbcL.fasta
   
 * Descomprimir el gen
   
