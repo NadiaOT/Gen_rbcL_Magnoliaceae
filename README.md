@@ -156,7 +156,7 @@ Contraseña: Leptailurus01&
 * Leptailurus01&
 
 # Resultados
-*Se visuliza una filogenia del gen rpl10 en Fig tree, aqui se va poder ver  un árbol filogenético que muestra cómo se agrupan y diferencian las especies de Magnoliaceae según las secuencias de rpl10, con ramas que reflejan el grado de similitud y nodos con soporte estadístico.
+Se visuliza una filogenia del gen rpl10 en Fig tree, aqui se va poder ver  un árbol filogenético que muestra cómo se agrupan y diferencian las especies de Magnoliaceae según las secuencias de rpl10, con ramas que reflejan el grado de similitud y nodos con soporte estadístico.
 # Bibliografía
 * Grupo de Filogenia de las Angiospermas. (2009). Actualización de la clasificación del Grupo de Filogenia de las Angiospermas para los órdenes y familias de plantas con flores: APG III. Botanical Journal of the Linnean Society , 161 (2), 105-121.
 * Li, J., y Conran, JG (2003). Relaciones filogenéticas en la subfamilia Magnoliaceae. Magnolioideae: un análisis cladístico morfológico. Sistemática y evolución de plantas , 242 , 33-47.
