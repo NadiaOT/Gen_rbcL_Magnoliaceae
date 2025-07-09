@@ -20,7 +20,7 @@ Autor: Nadia Obando
 # Programas a utilizar:
 * Muscle (muscle3.8.31_i86linux64): realiza alineamientos múltiples de secuencias de ADN, ARN o proteínas.
   
-  Este  programa bioinformático ya esta instaldo dentro de la carpeta
+  Este  programa bioinformático ya esta instalado dentro de la carpeta
   
 * IQ-TREE (iqtree/2.2.2.6): Construye árboles filogenéticos mediante máxima verosimilitud.
   
