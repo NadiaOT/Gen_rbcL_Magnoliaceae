@@ -71,7 +71,7 @@ Las secuencias del gen se encuentran en la carpeta  dentro de NadiaOT
   
   En caso de utilizar genes genes ortólogos utilizar Orthologs.IDS.
   
-  grep "rpl10" Orthologs.IDS.txt #En caso de utilizar orthologs (Grep nos sirve para saber si el gen dentro de Orthologs.IDS.)
+  grep "rpl10" Orthologs.IDS.txt (Grep nos sirve para saber si el gen dentro de Orthologs.IDS.)
   
   ./datasets download gene symbol rpl10 --ortholog Magnoliaceae --filename rpl10_Magnoliaceae.zip (Descargar los genes)
   
