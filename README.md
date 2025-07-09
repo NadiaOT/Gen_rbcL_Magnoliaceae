@@ -77,13 +77,23 @@ Las secuencias del gen se encuentran en la carpeta  dentro de NadiaOT
   
   En este caso el gen rbcL no se encuentra en Orthologs.IDS., entonces utilizaremos el siguiente comando para obtener los genes de la familia Magnoliaceae
   
-  /u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "rbcL [GENE] AND Magnoliaceae[ORGN]" | efetch -format fasta > Gen_rbcL_Magnoliaceae.zip
+  Opción 1: /u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "rbcL [GENE] AND Magnoliaceae[ORGN]" | efetch -format fasta > Gen_rbcL_Magnoliaceae.zip
 
-  esearch -db nucleotide -query "Magnoliaceae[Organism] AND rbcL[Gene]" | efetch -format fasta > Magnoliaceae_rbcL.fasta
+  Opcional: En caso de tener el documento comprimido utilizar este comando para descomprimir: unzip "Nombre del documento"
+
+  Opción 2: esearch -db nucleotide -query "Magnoliaceae[Organism] AND rbcL[Gene]" | efetch -format fasta > Magnoliaceae_rbcL.fasta
+
+* Descargar el gen en nuestro ordenador para editar el texto en Atom:
+
+  pwd (en Hoffman para saber en que lugar estoy localizado y se obtendra la dirección exacta del documento)
   
-* Descomprimir el gen
+  scp dechavez@hoffman2.idre.ucla.edu: “la direccion exacta del documento” ./ (en otra terminal)
   
-  unzip rpl10_Magnolia.zip
+  Contraseña: Leptailurus01&
+
+* Ingresar a Atom y abrir el cocumento descargado
+
+  
   
   nano rna.fna #Crear un espacio en el archivo con enter y borrar este mismo espacio, esto se hace para que se detecte que hubo un cambio y guarde, ademas se debe cambiar el nombre a rpl10.fna
 *  cd rpl10/Magnoliaceae
