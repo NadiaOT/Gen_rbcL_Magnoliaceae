@@ -97,7 +97,7 @@ Las secuencias del gen se encuentran en la carpeta  dentro de NadiaOT
 
  Replace: $1_$2
   
-*Subir el archivo a Hoffman
+* Subir el archivo a Hoffman
 
 En otra terminal desde el escritorio:
 
