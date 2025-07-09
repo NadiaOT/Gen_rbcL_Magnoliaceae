@@ -81,19 +81,60 @@ Las secuencias del gen se encuentran en la carpeta  dentro de NadiaOT
 
   Opcional: En caso de tener el documento comprimido utilizar este comando para descomprimir: unzip "Nombre del documento"
 
-  Opción 2: esearch -db nucleotide -query "Magnoliaceae[Organism] AND rbcL[Gene]" | efetch -format fasta > Magnoliaceae_rbcL.fasta
+  Opción 2: esearch -db nucleotide -query "Magnoliaceae[Organism] AND rbcL[Gene]" | efetch -format fasta > Magnoliaceae_rbcL.fasta (En este caso se utilizo este comando)
 
 * Descargar el gen en nuestro ordenador para editar el texto en Atom:
 
-  pwd (en Hoffman para saber en que lugar estoy localizado y se obtendra la dirección exacta del documento)
+  pwd (en Hoffman para saber en que lugar estoy localizado y se obtendra la dirección exacta del archivo)
   
-  scp dechavez@hoffman2.idre.ucla.edu: “la direccion exacta del documento” ./ (en otra terminal)
+  scp dechavez@hoffman2.idre.ucla.edu:“la direccion exacta del archivo” ./ (en otra terminal)
   
   Contraseña: Leptailurus01&
 
-* Ingresar a Atom y abrir el cocumento descargado
+* Ingresar a Atom y abrir el cocumento descargado, realizar los cambios necesarios y guardar con un nuevo nombre
 
+ Find: (>\w+)\.\d\s(\w+\s\w+).*
+
+ Replace: $1_$2
   
+*Subir el archivo a Hoffman
+
+En otra terminal desde el escritorio:
+
+En este caso el nuevo archivo se llama "Magnoliaceae_rbcL_enAtom"
+
+scp Magnoliaceae_rbcL_enAtom dechavez@hoffman2.idre.ucla.edu:"Direccion exacta en el lugar en el que se desea subir a Hoffman"
+
+Contraseña: Leptailurus01&
+
+* Ejecutar muscle para el alineamiento
+
+./muscle3.8.31_i86linux64 -in Magnoliaceae_rbcL_enAtom -out Magnoliaceae_rbcL_enAtom.muscle -maxiters 1 -diags
+
+* Ejecutar IQTREE
+
+  module load iqtree/2.2.2.6 
+
+  iqtree2
+  
+  for filename in musscle_*
+  
+  >do
+  
+  >iqtree2 -s $filename
+  
+  >done
+
+* Descargar el archivo en nuestra computadora
+  
+  pwd (en Hoffman para saber en que lugar estoy localizado y se obtendra la direccion exacta)
+  
+  scp dechavez@hoffman2.idre.ucla.edu:“la direccion exacta del archivo” ./ (en otra terminal)
+  
+  Contraseña: Leptailurus01&
+
+* Abrir el archivo en Fig tree para visualizar el arbol 
+
   
   nano rna.fna #Crear un espacio en el archivo con enter y borrar este mismo espacio, esto se hace para que se detecte que hubo un cambio y guarde, ademas se debe cambiar el nombre a rpl10.fna
 *  cd rpl10/Magnoliaceae
