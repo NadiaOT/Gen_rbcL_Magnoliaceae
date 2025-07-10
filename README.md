@@ -79,7 +79,9 @@ Las secuencias del gen se encuentran en la carpeta  dentro de NadiaOT
   
   Opción 1: /u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "rbcL [GENE] AND Magnoliaceae[ORGN]" | efetch -format fasta > Gen_rbcL_Magnoliaceae.zip
 
-  Opcional: En caso de tener el documento comprimido utilizar este comando para descomprimir: unzip "Nombre del documento"
+  Cambiar el nombre a .fasta: mv Gen_rbcL_Magnoliaceae.zip Gen_rbcL_Magnoliaceae.fasta
+
+  Nota: En caso de tener el documento comprimido utilizar este comando para descomprimir: unzip "Nombre del documento"
 
   Opción 2: esearch -db nucleotide -query "Magnoliaceae[Organism] AND rbcL[Gene]" | efetch -format fasta > Magnoliaceae_rbcL.fasta (En este caso se utilizo este comando)
 
