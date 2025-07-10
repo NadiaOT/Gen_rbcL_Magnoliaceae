@@ -65,11 +65,11 @@ Las secuencias del gen se encuentran en la carpeta  dentro de NadiaOT
   
   cd NadiaOT/
   
-  cd TrabajoFinal/
+  cd Magnoliaceae/
   
 * Buscar y descargar el gen
   
-  En caso de utilizar genes genes ortólogos utilizar Orthologs.IDS.
+  En caso de utilizar genes ortólogos utilizar Orthologs.IDS.
   
   grep "rpl10" Orthologs.IDS.txt (Grep nos sirve para saber si el gen dentro de Orthologs.IDS.)
   
@@ -77,11 +77,15 @@ Las secuencias del gen se encuentran en la carpeta  dentro de NadiaOT
   
   En este caso el gen rbcL no se encuentra en Orthologs.IDS., entonces utilizaremos el siguiente comando para obtener los genes de la familia Magnoliaceae
   
-  Opción 1: /u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "rbcL [GENE] AND Magnoliaceae[ORGN]" | efetch -format fasta > Gen_rbcL_En_Magnoliaceae (En este caso se utilizo este comando)
+  Opción 1: Esta opción selecciona solo genes ortólogos (es mas especifica)
+
+  /u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "rbcL [GENE] AND Magnoliaceae[ORGN]" | efetch -format fasta > Gen_rbcL_En_Magnoliaceae (En este caso se utilizo este comando)
+
+  Opción 2: Esta en cambio es una opción mas general
+
+  esearch -db nucleotide -query "Magnoliaceae[Organism] AND rbcL[Gene]" | efetch -format fasta > Magnoliaceae_rbcL.fasta (En este caso se utilizo este comando)
 
   Nota: En caso de tener el documento comprimido utilizar este comando para descomprimir: unzip "Nombre del documento"
-
-  Opción 2: esearch -db nucleotide -query "Magnoliaceae[Organism] AND rbcL[Gene]" | efetch -format fasta > Magnoliaceae_rbcL.fasta (En este caso se utilizo este comando)
 
 * Descargar el gen en nuestro ordenador para editar el texto en Atom:
 
@@ -91,7 +95,7 @@ Las secuencias del gen se encuentran en la carpeta  dentro de NadiaOT
   
   Contraseña: Leptailurus01&
 
-* Ingresar a Atom y abrir el cocumento descargado, realizar los cambios necesarios y guardar con un nuevo nombre
+* Ingresar a Atom y abrir el archivo descargado, realizar los cambios necesarios y guardar con un nuevo nombre
 
  Find: (>\w+)\.\d\s(\w+\s\w+).*
 
@@ -101,18 +105,26 @@ Las secuencias del gen se encuentran en la carpeta  dentro de NadiaOT
 
 En otra terminal desde el escritorio:
 
-En este caso el nuevo archivo se llama "Gen_rbcL_En_Magnoliaceae_Atom"
+En este caso el nuevo archivo se llama "Gen_rbcL_En_Magnoliaceae.fasta"
 
-scp Gen_rbcL_En_Magnoliaceae_Atom dechavez@hoffman2.idre.ucla.edu:"Direccion exacta en el lugar en el que se desea subir a Hoffman"
+scp Gen_rbcL_En_Magnoliaceae.fasta dechavez@hoffman2.idre.ucla.edu:"Direccion exacta en el lugar en el que se desea subir a Hoffman"
 
 Contraseña: Leptailurus01&
 
 * Ejecutar muscle para el alineamiento
 
-* Nota: Este alineamiento se demora mucho tiempo por ende Correr Header.sh (Aqui estan los comandos para que se haga el alineamiento)
+  Nota: Este alineamiento se demora mucho tiempo debido a la cantidad de secuencias por ende correr Header.sh (Aqui estan los comandos para que se haga el alineamiento)
 
    qsub Header.sh
+  
    myjobs
+
+  Si deseas ver los comandos que hay en este archivo realizar el siguiente comando:
+
+  cat Header.sh (Ver la información)
+
+  nano Header.sh (Realizar cambios)
+  
 
 ./muscle3.8.31_i86linux64 -in Magnoliaceae_rbcL_enAtom -out Magnoliaceae_rbcL_enAtom.muscle -maxiters 1 -diags
 
