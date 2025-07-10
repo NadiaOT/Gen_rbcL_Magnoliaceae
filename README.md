@@ -77,9 +77,7 @@ Las secuencias del gen se encuentran en la carpeta  dentro de NadiaOT
   
   En este caso el gen rbcL no se encuentra en Orthologs.IDS., entonces utilizaremos el siguiente comando para obtener los genes de la familia Magnoliaceae
   
-  Opción 1: /u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "rbcL [GENE] AND Magnoliaceae[ORGN]" | efetch -format fasta > Gen_rbcL_Magnoliaceae.zip
-
-  Cambiar el nombre a .fasta: mv Gen_rbcL_Magnoliaceae.zip Gen_rbcL_Magnoliaceae.fasta
+  Opción 1: /u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "rbcL [GENE] AND Magnoliaceae[ORGN]" | efetch -format fasta > Gen_rbcL_En_Magnoliaceae (En este caso se utilizo este comando)
 
   Nota: En caso de tener el documento comprimido utilizar este comando para descomprimir: unzip "Nombre del documento"
 
@@ -103,17 +101,24 @@ Las secuencias del gen se encuentran en la carpeta  dentro de NadiaOT
 
 En otra terminal desde el escritorio:
 
-En este caso el nuevo archivo se llama "Magnoliaceae_rbcL_enAtom"
+En este caso el nuevo archivo se llama "Gen_rbcL_En_Magnoliaceae_Atom"
 
-scp Magnoliaceae_rbcL_enAtom dechavez@hoffman2.idre.ucla.edu:"Direccion exacta en el lugar en el que se desea subir a Hoffman"
+scp Gen_rbcL_En_Magnoliaceae_Atom dechavez@hoffman2.idre.ucla.edu:"Direccion exacta en el lugar en el que se desea subir a Hoffman"
 
 Contraseña: Leptailurus01&
 
 * Ejecutar muscle para el alineamiento
 
+* Nota: Este alineamiento se demora mucho tiempo por ende Correr Header.sh (Aqui estan los comandos para que se haga el alineamiento)
+
+   qsub Header.sh
+   myjobs
+
 ./muscle3.8.31_i86linux64 -in Magnoliaceae_rbcL_enAtom -out Magnoliaceae_rbcL_enAtom.muscle -maxiters 1 -diags
 
 * Ejecutar IQTREE
+
+  
 
   module load iqtree/2.2.2.6 
 
