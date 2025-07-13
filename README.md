@@ -113,6 +113,8 @@ Contraseña: Leptailurus01&
 
 * Ejecutar muscle para el alineamiento
 
+Opcion 1: 
+
   Nota: Este alineamiento se demora mucho tiempo debido a la cantidad de secuencias por ende correr Header.sh (Aqui estan los comandos para que se haga el alineamiento)
 
    qsub Header.sh
@@ -125,12 +127,11 @@ Contraseña: Leptailurus01&
 
   nano Header.sh (Realizar cambios)
   
+Opcion 2:
 
-./muscle3.8.31_i86linux64 -in Magnoliaceae_rbcL_enAtom -out Magnoliaceae_rbcL_enAtom.muscle -maxiters 1 -diags
+./muscle3.8.31_i86linux64 -in Gen_rbcL_En_Magnoliaceae.fasta -out Gen_rbcL_En_Magnoliaceae.fasta.muscle -maxiters 1 -diags
 
 * Ejecutar IQTREE
-
-  
 
   module load iqtree/2.2.2.6 
 
