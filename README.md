@@ -53,7 +53,7 @@ Las secuencias del gen se encuentran en la carpeta  dentro de NadiaOT
   
 * Pedir almacenamiento
   
-  qrsh -l h_rt=4:00:00,h_vmem=30G -pe shared 4
+  qrsh -l h_rt=6:00:00,h_vmem=60G -pe shared 4
   
 * Ingresar a la carpeta
   
@@ -71,19 +71,19 @@ Las secuencias del gen se encuentran en la carpeta  dentro de NadiaOT
   
   En caso de utilizar genes ortólogos utilizar Orthologs.IDS.
   
-  grep "rpl10" Orthologs.IDS.txt (Grep nos sirve para saber si el gen dentro de Orthologs.IDS.)
+  grep "ycf68" Orthologs.IDS.txt (Grep nos sirve para saber si el gen dentro de Orthologs.IDS.)
   
-  ./datasets download gene symbol rpl10 --ortholog Magnoliaceae --filename rpl10_Magnoliaceae.zip (Descargar los genes)
+  ./datasets download gene symbol ycf68 --ortholog Magnoliaceae --filename ycf68_Magnoliaceae.zip (Descargar los genes)
   
-  En este caso el gen rbcL no se encuentra en Orthologs.IDS., entonces utilizaremos el siguiente comando para obtener los genes de la familia Magnoliaceae
+  En este caso el gen ycf68 no se encuentra en Orthologs.IDS., entonces utilizaremos el siguiente comando para obtener los genes de la familia Magnoliaceae
   
   Opción 1: Esta opción selecciona solo genes ortólogos (es mas especifica)
 
-  /u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "rbcL [GENE] AND Magnoliaceae[ORGN]" | efetch -format fasta > Gen_rbcL_En_Magnoliaceae (En este caso se utilizo este comando)
+  /u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "ycf68 [GENE] AND Magnoliaceae[ORGN]" | efetch -format fasta > ycf68_Magnoliaceae.fasta (En este caso se utilizo este comando)
 
   Opción 2: Esta en cambio es una opción mas general
 
-  esearch -db nucleotide -query "Magnoliaceae[Organism] AND rbcL[Gene]" | efetch -format fasta > Magnoliaceae_rbcL.fasta (En este caso se utilizo este comando)
+  esearch -db nucleotide -query "Magnoliaceae[Organism] AND ycf68[Gene]" | efetch -format fasta > ycf68_Magnoliaceae.fasta 
 
   Nota: En caso de tener el documento comprimido utilizar este comando para descomprimir: unzip "Nombre del documento"
 
@@ -96,18 +96,18 @@ Las secuencias del gen se encuentran en la carpeta  dentro de NadiaOT
   Contraseña: Leptailurus01&
 
 * Ingresar a Atom y abrir el archivo descargado, realizar los cambios necesarios y guardar con un nuevo nombre
-
+  
  Find: (>\w+)\.\d\s(\w+\s\w+).*
 
  Replace: $1_$2
-  
+ 
+ En este caso el nuevo archivo se llama "ycf68_MagnoliaceaeAt.fasta"
+ 
 * Subir el archivo a Hoffman
 
 En otra terminal desde el escritorio:
 
-En este caso el nuevo archivo se llama "Gen_rbcL_En_Magnoliaceae.fasta"
-
-scp Gen_rbcL_En_Magnoliaceae.fasta dechavez@hoffman2.idre.ucla.edu:"Direccion exacta en el lugar en el que se desea subir a Hoffman"
+scp ycf68_MagnoliaceaeAt.fasta dechavez@hoffman2.idre.ucla.edu:"Direccion exacta en el lugar en el que se desea subir a Hoffman"
 
 Contraseña: Leptailurus01&
 
@@ -115,35 +115,36 @@ Contraseña: Leptailurus01&
 
 Opcion 1: 
 
-  Nota: Este alineamiento se demora mucho tiempo debido a la cantidad de secuencias por ende correr Header.sh (Aqui estan los comandos para que se haga el alineamiento)
+./muscle3.8.31_i86linux64 -in ycf68_MagnoliaceaeAt.fasta -out ycf68_MagnoliaceaeAt.fasta.muscle -maxiters 1 -diags 
+
+Opcion 2: 
+
+  Nota: Si el alineamiento se demora mucho tiempo debido a la cantidad de secuencias debe correr Header.sh (Aqui estan los comandos para que se haga el alineamiento, ante srealizar cambios de acuerdo a su archivo)
+
+Para correr Header.sh deber hacer lo siguiente: 
 
    qsub Header.sh
   
    myjobs
 
-  Si deseas ver los comandos que hay en este archivo realizar el siguiente comando:
+ Nota: Si deseas ver los comandos que hay en este archivo realizar el siguiente comando:
 
   cat Header.sh (Ver la información)
 
   nano Header.sh (Realizar cambios)
-  
-Opcion 2:
 
-./muscle3.8.31_i86linux64 -in Gen_rbcL_En_Magnoliaceae.fasta -out Gen_rbcL_En_Magnoliaceae.fasta.muscle -maxiters 1 -diags
 
 * Ejecutar IQTREE
 
   module load iqtree/2.2.2.6 
 
   iqtree2
+
+   for filename in muscle_*.fasta.muscle
   
-  for filename in musscle_*
-  
-  >do
-  
-  >iqtree2 -s $filename
-  
-  >done
+> do
+> iqtree2 -s "$filename" -m MFP -bb 1000 -nt AUTO
+> done
 
 * Descargar el archivo en nuestra computadora
   
