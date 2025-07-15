@@ -97,17 +97,17 @@ Las secuencias del gen se encuentran en la carpeta  dentro de NadiaOT
 
 * Ingresar a Atom y abrir el archivo descargado, realizar los cambios necesarios y guardar con un nuevo nombre
   
- Find: (>\w+)\.\d\s(\w+\s\w+).*
+ Find: (>\w+)\.\d\s+(\w+)\s+(\w+).*
 
- Replace: $1_$2
+ Replace: $1_$2_$3
  
- En este caso el nuevo archivo se llama "ycf68_MagnoliaceaeAt.fasta"
+ En este caso el nuevo archivo se llama "ycf68_MagnoliaceaeAtm.fasta"
  
 * Subir el archivo a Hoffman
 
 En otra terminal desde el escritorio:
 
-scp ycf68_MagnoliaceaeAt.fasta dechavez@hoffman2.idre.ucla.edu:"Direccion exacta en el lugar en el que se desea subir a Hoffman"
+scp ycf68_MagnoliaceaeAtm.fasta dechavez@hoffman2.idre.ucla.edu:"Direccion exacta en el lugar en el que se desea subir a Hoffman"
 
 Contraseña: Leptailurus01&
 
@@ -115,7 +115,7 @@ Contraseña: Leptailurus01&
 
 Opcion 1: 
 
-./muscle3.8.31_i86linux64 -in ycf68_MagnoliaceaeAt.fasta -out ycf68_MagnoliaceaeAt.fasta.muscle -maxiters 1 -diags 
+./muscle3.8.31_i86linux64 -in ycf68_MagnoliaceaeAtm.fasta -out ycf68_MagnoliaceaeAtm.fasta.muscle -maxiters 1 -diags 
 
 Opcion 2: 
 
@@ -145,6 +145,8 @@ Para correr Header.sh deber hacer lo siguiente:
 > do
 > iqtree2 -s "$filename" -m MFP -bb 1000 -nt AUTO
 > done
+
+ycf68_MagnoliaceaeAt.fasta.muscle.treefile
 
 * Descargar el archivo en nuestra computadora
   
