@@ -170,8 +170,13 @@ En esta carpeta se encuentra lo siguiente:
 
 Data: Las secuencias del gen
 
-Data:
+ycf68_Magnoliaceae.fasta: Secuencia descargada
 
+ycf68_MagnoliaceaeAtm.fasta: Secuencia modificada en ATOM
+
+ycf68_MagnoliaceaeAtm.fasta.muscle: Secuencia alineada
+
+Data:
 
 # Bibliografía
 
