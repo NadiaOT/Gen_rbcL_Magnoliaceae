@@ -5,13 +5,13 @@ Autor: Nadia Obando
 ![alt text](https://jeppastradgard.se/wp-content/uploads/2024/12/PTM023_Little-Gem-Magnolia-.jpg)
 # Propósito del proyecto
 * El estudio de la filogenia y las relaciones evolutivas en la familia Magnoliaceae, un grupo basal de plantas con más de 100 millones de años dentro del clado Magnoliidae (Grupo de Filogenia de las Angiospermas, 2009), es fundamental para entender su historia y diversidad.
-* La filogenia de la familia Magnoliaceae utilizando secuencias del gen rbcL nos ayudara a evaluar las relaciones evolutivas entre sus géneros y especies. El gen rbcL, que codifica la subunidad grande de la enzima RuBisCO involucrada en la fotosíntesis, es un marcador molecular comúnmente empleado en estudios sistemáticos por su conservación y utilidad para resolver relaciones evolutivas a nivel familiar y supraespecífico (Li & Conran, 2003;Zhao et al., 2023).
-* A través del análisis filogenético basado en este gen, se busca:
   
-  Identificar patrones de divergencia genética dentro de la familia.
+* La filogenia de la familia Magnoliaceae utilizando secuencias del gen rbcL nos ayudara a evaluar las relaciones evolutivas entre sus géneros y especies. La familia presenta alrededor de 350 especies reconocidas mundialmente con una gran diversidad morfológica y ecológica considerable (Castañeda, 2015), pero aún existen relaciones evolutivas poco claras entre sus linajes. El uso de nuevos marcadores moleculares, como el gen plastidial ycf68, podría ayudar a resolver nodos filogenéticos no resueltos y mejorar la comprensión de su historia evolutiva, además la diferencia de marcadores moleculares más habituales como matK o rbcL, el gen ycf68 ha sido poco explorado en estudios filogenéticos, lo que convierte a este trabajo en una oportunidad para diversificar los genes empleados en la sistemática de plantas.(Tian, Han, Chen & Wang, 2018;Gallego Zaragoza, 2016).
   
-  Comparar los agrupamientos filogenéticos con las clasificaciones taxonómicas tradicionales.
-  
+*Este trabajo busca:
+
+Generar una filogenia más sólida que puede contribuir a una mejor delimitación de especies y géneros, aspecto crucial en grupos como las Magnolias, que poseen un alto valor ecológico.
+
   Contribuir al entendimiento de la evolución temprana de las angiospermas, dado el carácter basal de Magnoliaceae dentro del clado de las dicotiledóneas ya que esta familia representa un grupo de gran relevancia evolutiva debido a su antigüedad, esta característica la convierte en un elemento fundamental para el estudio de la evolución y ecología de las plantas con flores (Grupo de Filogenia de las Angiospermas, 2009).
   
 * Este enfoque filogenético también puede servir como base para futuros estudios de biogeografía, conservación y evolución morfológica dentro del grupo ademas de que nos ayudan a clarificar la evolución, diversidad y taxonomía de esta familia, además de apoyar la conservación de sus especies, muchas de las cuales son endémicas y ecológicamente importantes.
@@ -174,14 +174,15 @@ ycf68_MagnoliaceaeAt.fasta.muscle.treefile
 >do
 >iqtree2 -s $filename
 >done
-* pwd #(en offman para saber en que lugar estoy localizado y se obtendra la direccion exata deol documento)
+* pwd #(en offman para saber en que lugar estoy localizado y se obtendra la direccion exata deol documento)  
 * scp dechavez@hoffman2.idre.ucla.edu: “la direccion exacta del documento” ./ #(en otra terminal)
 * Leptailurus01&
 
 # Resultados
 Se visuliza una filogenia del gen rpl10 en Fig tree, aqui se va poder ver  un árbol filogenético que muestra cómo se agrupan y diferencian las especies de Magnoliaceae según las secuencias de rpl10, con ramas que reflejan el grado de similitud y nodos con soporte estadístico.
 # Bibliografía
+* Gallego Zaragoza, A. (2016). Secuenciación, ensamblaje de novo y anotación del genoma del cloroplasto del ajo (Allium sativum). https://dspace.umh.es/handle/11000/3562 
 * Grupo de Filogenia de las Angiospermas. (2009). Actualización de la clasificación del Grupo de Filogenia de las Angiospermas para los órdenes y familias de plantas con flores: APG III. Botanical Journal of the Linnean Society , 161 (2), 105-121.
-* Li, J., y Conran, JG (2003). Relaciones filogenéticas en la subfamilia Magnoliaceae. Magnolioideae: un análisis cladístico morfológico. Sistemática y evolución de plantas , 242 , 33-47.
-* Zhao, J., Chen, H., Li, G., Jumaturti, M. A., Yao, X., & Hu, Y. (2023). Phylogenetics Study to Compare Chloroplast Genomes in Four Magnoliaceae Species. Current issues in molecular biology, 45(11), 9234–9251. https://doi.org/10.3390/cimb45110578
-
+* CASTAÑEDA, Á. J. P. (2015). Taxonomía y conservación de la familia Magnoliaceae en el Ecuador (Doctoral dissertation, PONTIFICIA UNIVERSIDAD CATÓLICA DEL ECUADOR). https://repositorio.puce.edu.ec/items/fbcad69c-efe2-4270-87a0-e7c5d048d0d6
+* Tian, N., Han, L., Chen, C. y Wang, Z. (2018). Secuencia completa del genoma del cloroplasto de Epipremnum aureum y su análisis comparativo entre ocho especies de Araceae. PLoS One , 13 (3), e0192956. https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0192956 
+  
