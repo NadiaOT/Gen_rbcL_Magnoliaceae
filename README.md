@@ -140,15 +140,11 @@ Para correr Header.sh deber hacer lo siguiente:
 
   iqtree2
 
-   for filename in muscle_*.fasta.muscle
+   for filename in *.fasta.muscle
+do
+    iqtree2 -s "$filename" -m MFP -bb 1000 -nt AUTO
+done
 
-  do
-
-  iqtree2 -s "$filename" -m MFP -bb 1000 -nt AUTO
-
-  done
-
-ycf68_MagnoliaceaeAt.fasta.muscle.treefile
 
 * Descargar el archivo que termine en .treefile en nuestra computadora ( En este caso ycf68_MagnoliaceaeAt.fasta.muscle.treefile)
   
