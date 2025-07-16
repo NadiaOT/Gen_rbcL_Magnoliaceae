@@ -1,4 +1,4 @@
-# Relación evolutiva del gen rbcL en Magnoliaceae
+# Relación evolutiva del gen ycf68 en Magnoliaceae
 
 Autor: Nadia Obando
 
@@ -158,7 +158,9 @@ done
 
 # Resultados
 
-Se visuliza una filogenia del gen rpl10 en Fig tree, aqui se va poder ver  un árbol filogenético que muestra cómo se agrupan y diferencian las especies de Magnoliaceae según las secuencias de rpl10, con ramas que reflejan el grado de similitud y nodos con soporte estadístico.
+Se visuliza una filogenia del gen ycf68 en Fig tree. El análisis incluyó representantes de varias especies del género Magnolia, obteniendo un árbol filogenético que revela agrupamientos coherentes con relaciones taxonómicas previamente propuestas. Por ejemplo as secuencias de Magnolia maudiae (NC_047409 y MK831950) se agrupan juntas, formando un clado consistente, por otro lado Magnolia virginiana, una especie americana, se agrupa más cercanamente a especies asiáticas como Magnolia macclurei, lo cual podría reflejar un patrón evolutivo conservado en el gen ycf68 o posibles relaciones más complejas entre distintos linajes, ademas  Magnolia chapensis (NC_053737 y MT44723) aparecen como un clado bien definido, lo que indica una alta similitud entre ambas secuencias, posiblemente  ensamblajes de la misma especie.
+
+Los resultados obtenidos indican que el gen ycf68 presenta un nivel de variación adecuado para inferir relaciones evolutivas. Sin embargo, también se observaron casos en los que su capacidad de resolución resulta limitada o poco clara pero podría desempeñar un papel útil como marcador complementario, particularmente en análisis filogenéticos que integran múltiples genes.
 
 # Carpeta de Magnoliaceae dentro de NadiaOT
 
