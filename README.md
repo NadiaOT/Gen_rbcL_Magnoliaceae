@@ -164,7 +164,7 @@ Los resultados obtenidos indican que el gen ycf68 presenta un nivel de variació
 
 # Carpeta de Magnoliaceae dentro de NadiaOT
 
-En esta carpeta se encuentra lo siguiente: 
+Cosas importantes que vamos encontrar en esta carpeta: 
 
 Data: Las secuencias del gen
 
@@ -174,7 +174,11 @@ ycf68_MagnoliaceaeAtm.fasta: Secuencia modificada en ATOM
 
 ycf68_MagnoliaceaeAtm.fasta.muscle: Secuencia alineada
 
-Data:
+Data_IQtree: Resultados de la filogenia 
+
+Scripts_Filogenia_Magnoliaceae: Scripts para realizar el trabajo
+
+ muscle3.8.31_i86linux64: Programa 
 
 # Bibliografía
 
