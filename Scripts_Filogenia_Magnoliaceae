@@ -1,0 +1,31 @@
+#Ingresar a Hoffman
+ssh dechavez@hoffman2.idre.ucla.edu
+Leptailurus01&
+#Reservar
+qrsh -l h_rt=4:00:00,h_vmem=30G -pe shared 4
+#Ingresara a carpeta
+cd $SCRATCH/
+cd Bioinformatica-PUCE/
+cd RediseBio/
+cd NadiaOT/
+cd Magnoliaceae/
+#Descargar genes 
+/u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "ycf68 [GEN] Y Magnoliaceae[ORGN]" | efetch -format fasta > ycf68_Magnoliaceae.fasta
+#Descargar el gen en nuestro ordenador para editar el texto en Atom:
+#En Hoffman
+pwd
+#En otra terminal
+scp dechavez@hoffman2.idre.ucla.edu:"Direccion del documento"
+Leptailurus01&
+#Subir el archivo modificado a Hoffman
+#En otra terminal
+scp ycf68_MagnoliaceaeAtm.fasta dechavez@hoffman2.idre.ucla.edu:"Direccion exacta en el lugar en el que se desea subir a Hoffman"
+Leptailurus01&
+#Alineamiento
+./muscle3.8.31_i86linux64 -in ycf68_MagnoliaceaeAtm.fasta -out ycf68_MagnoliaceaeAtm.fasta.muscle -maxiters 1 -diags
+#Filogenia
+module load iqtree/2.2.2.6
+for filename in *.fasta.muscle 
+do 
+iqtree2 -s "$filename" -m MFP -bb 1000 -nt AUTO 
+done
